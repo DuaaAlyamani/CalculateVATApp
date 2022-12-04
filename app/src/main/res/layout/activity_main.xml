@@ -8,7 +8,7 @@
     android:padding="10dp">
 
     <EditText
-        android:id="@+id/cost_or_total_price"
+        android:id="@+id/et_cost_or_total_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/cost_or_total_price"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_vat_percentage"
-        app:layout_constraintTop_toBottomOf="@id/cost_or_total_price"
+        app:layout_constraintTop_toBottomOf="@id/et_cost_or_total_price"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <RadioGroup
@@ -58,7 +58,7 @@
     </RadioGroup>
 
     <Switch
-        android:id="@+id/round_up_total"
+        android:id="@+id/sw_round_up_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/round_up_total"
@@ -68,11 +68,18 @@
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
-        android:id="@+id/calculate_VAT"
+        android:id="@+id/bu_calculate_VAT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/round_up_total"
+        app:layout_constraintTop_toBottomOf="@+id/sw_round_up_total"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/calculate_vat" />
+    <TextView
+        android:id="@+id/tv_resul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Result"
+        app:layout_constraintTop_toBottomOf="@+id/bu_calculate_VAT"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
